@@ -10,8 +10,8 @@ export default function Header() {
           <Image
             src="https://hpa.vc/wp-content/uploads/2016/05/Brilliant_Logo1.png"
             alt="Brilliant Logo"
-            width={140}  // можно изменить ширину
-            height={40}  // и высоту
+            width={140}  
+            height={40}  
             priority
           />
         </Link>
