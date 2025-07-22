@@ -1,103 +1,102 @@
 import Image from "next/image";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const cards = [
+    {
+      title: "The Middle Child",
+      description:
+        "Given the information about the relationships among children's ages, can you identify the middle child?",
+      image: "/img1.png",
+      people: "5,333 people working on this",
+    },
+    {
+      title: "Clingy Charges",
+      description:
+        "Outside of the lab, it's hard to see the effect of electric forces, but here's a quick and easy way to unlock their effects in your kitchen!",
+      image: "/img2.png",
+      people: "10,232 people working on this",
+    },
+    {
+      title: "Making Necklaces",
+      description:
+        "Jaz makes necklaces by stringing two different colors of beads together. How many different patterns can she create?",
+      image: "/img3.png",
+      people: "7,380 people working on this",
+    },
+    {
+      title: "What's the Difference?",
+      description:
+        "What’s the difference between these two angles?",
+      image: "/img4.png",
+      people: "9,547 people working on this",
+    },
+    {
+      title: "Blank Spaces",
+      description:
+        "This puzzle has two clues to describe the locations of three pieces. Which spaces on the board will have to remain empty?",
+      image: "/img4.png",
+      people: "9,546 people working on this",
+    },
+    {
+      title: "The Mysterious Age",
+      description:
+        "Some numbers have interesting relationships with their digits. Can you use the information provided to deduce Elijah's age?",
+      image: "/img4.png",
+      people: "11,938 people working on this",
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <div className="bg-gray-100 min-h-screen">
+      <div className="max-w-7xl mx-auto p-6">
+        <h1 className="text-4xl font-bold mb-6">Today</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Левая колонка с календарём */}
+          <div className="bg-white p-6 rounded-lg shadow-md h-fit">
+            <h2 className="text-lg font-semibold mb-4">JULY 2025</h2>
+            <div className="grid grid-cols-7 text-center text-gray-600 gap-y-2">
+              <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+              {/* 1 неделя */}
+              <div></div><div></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
+              {/* 2 неделя */}
+              <div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div>
+              {/* 3 неделя */}
+              <div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div>
+              {/* 4 неделя */}
+              <div>20</div><div>21</div>
+              <div className="rounded-full border border-orange-500 text-orange-500 font-bold">
+                22
+              </div>
+              <div>23</div><div>24</div><div>25</div><div>26</div>
+              {/* 5 неделя */}
+              <div>27</div><div>28</div><div>29</div><div>30</div><div>31</div><div></div><div></div>
+            </div>
+          </div>
+
+          {/* Правая колонка с карточками */}
+          <div className="space-y-4">
+            {cards.map((card, index) => (
+              <div key={index} className="bg-white p-4 rounded-lg shadow-md flex gap-4 items-center">
+                <div className="flex-shrink-0">
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    width={180}
+                    height={120}
+                    className="rounded-md"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-sm uppercase text-gray-500">MATH AND LOGIC</h3>
+                  <h2 className="text-lg font-semibold">{card.title}</h2>
+                  <p className="text-sm text-gray-600">{card.description}</p>
+                  <p className="text-xs text-gray-400 mt-1">{card.people}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }

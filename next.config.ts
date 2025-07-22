@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+    images: {
+    domains: ["hpa.vc"], // Разрешаем подгружать картинки с hpa.vc
+  },
 };
 
 export default nextConfig;
