@@ -1,43 +1,68 @@
-export default function Courses() {
-  const courses = [
-    {
-      title: "Logic",
-      description: "Stretch your analytic muscles with knights, knaves, logic gates, and more!",
-      image: "/img1.png",
-    },
-    {
-      title: "Computer Science Fundamentals",
-      description: "Wrap your mind around computational thinking, from everyday tasks to algorithms.",
-      image: "/img2.png",
-    },
-    {
-      title: "Introduction to Neural Networks",
-      description: "Learn why neural networks are such flexible tools for learning.",
-      image: "/img3.png",
-    },
-    {
-      title: "Mathematical Fundamentals",
-      description: "The essential tools for mastering algebra, logic, and number theory!",
-      image: "/img4.png",
-    },
-  ];
+import Link from "next/link";
+import Image from "next/image";
 
+export default function CoursesPage() {
   return (
-    <div className="px-10 py-10 bg-gray-100 min-h-screen">
-      <h1 className="text-3xl font-bold mb-2">Popular Courses ✨</h1>
-      <p className="text-gray-500 mb-8">Popular with our users in the last month</p>
-      
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        {courses.map((course, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl hover:scale-105 transition duration-300 cursor-pointer"
-          >
-            <img src={course.image} alt={course.title} className="rounded-md mb-4" />
-            <h2 className="font-semibold text-lg">{course.title}</h2>
-            <p className="text-sm text-gray-600 mt-2">{course.description}</p>
+    <div className="max-w-6xl mx-auto px-6 py-10">
+      <h1 className="text-3xl font-bold mb-6">Сотрудники</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <Link href="/courses/employee1">
+          <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg cursor-pointer transition">
+            <Image
+              src="/employees/employee1.png"
+              alt="Сотрудник 1"
+              width={300}
+              height={200}
+              className="rounded-md mb-4"
+            />
+            <h2 className="text-xl font-bold">Сотрудник 1</h2>
+            <p className="text-gray-600">QA Engineer</p>
           </div>
-        ))}
+        </Link>
+
+        <Link href="/courses/employee2">
+          <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg cursor-pointer transition">
+            <Image
+              src="/employees/employee2.png"
+              alt="Сотрудник 2"
+              width={300}
+              height={200}
+              className="rounded-md mb-4"
+            />
+            <h2 className="text-xl font-bold">Сотрудник 2</h2>
+            <p className="text-gray-600">Frontend Developer</p>
+          </div>
+        </Link>
+
+        <Link href="/courses/employee3">
+          <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg cursor-pointer transition">
+            <Image
+              src="/employees/employee3.png"
+              alt="Сотрудник 3"
+              width={300}
+              height={200}
+              className="rounded-md mb-4"
+            />
+            <h2 className="text-xl font-bold">Сотрудник 3</h2>
+            <p className="text-gray-600">Backend Developer</p>
+          </div>
+        </Link>
+
+        <Link href="/courses/employee4">
+          <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg cursor-pointer transition">
+            <Image
+              src="/employees/employee4.png"
+              alt="Сотрудник 4"
+              width={300}
+              height={200}
+              className="rounded-md mb-4"
+            />
+            <h2 className="text-xl font-bold">Сотрудник 4</h2>
+            <p className="text-gray-600">DevOps</p>
+          </div>
+        </Link>
+
       </div>
     </div>
   );

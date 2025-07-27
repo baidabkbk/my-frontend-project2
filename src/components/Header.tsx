@@ -19,7 +19,7 @@ export default function Header() {
         {/* Навигация */}
         <nav className="flex items-center space-x-6 text-gray-700">
           <Link href="/">Today</Link>
-          <Link href="/courses">Courses</Link>
+          <Link href="/courses">Personal</Link>
           <Link href="/practice">Practice</Link>
           <Link href="/login">Log in</Link>
           <Link
