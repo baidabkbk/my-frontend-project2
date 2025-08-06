@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Сотрудник 1",
+    "position": "QA Engineer",
+    "birthPlace": "Алматы, Казахстан",
+    "education": "Международный IT-университет",
+    "family": "4 человека, не женат",
+    "about": "Опытный QA-инженер с навыками автоматизации тестирования и знанием JavaScript.",
+    "image": "/employees/employee1.png"
+  },
+  {
+    "id": 2,
+    "name": "Сотрудник 2",
+    "position": "Frontend Developer",
+    "birthPlace": "Астана, Казахстан",
+    "education": "Евразийский национальный университет",
+    "family": "3 человека, женат",
+    "about": "Увлекаюсь разработкой интерфейсов на React и Next.js",
+    "image": "/employees/employee2.png"
+  },
+  {
+    "id": 3,
+    "name": "Сотрудник 3",
+    "position": "Backend Developer",
+    "birthPlace": "Караганда, Казахстан",
+    "education": "Карагандинский государственный университет",
+    "family": "2 человека, не женат",
+    "about": "Опыт работы с Node.js, PHP и базами данных PostgreSQL и MySQL. Люблю оптимизацию API.",
+    "image": "/employees/employee3.png"
+  },
+  {
+    "id": 4,
+    "name": "Сотрудник 4",
+    "position": "DevOps Engineer",
+    "birthPlace": "Шымкент, Казахстан",
+    "education": "Казахский национальный университет",
+    "family": "5 человек, женат",
+    "about": "Специалист по CI/CD, Kubernetes и Docker. Настраиваю автоматизацию серверов и деплоя.",
+    "image": "/employees/employee4.png"
+  }
+]

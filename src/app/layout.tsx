@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
         <Header /> {/* Хедер с логотипом по ссылке */}
-        <main className="flex-grow container mx-auto px-6 py-10">{children}</main>
+        <main className="flex-grow container mx-auto px-5 py-5">{children}</main>
         <Footer />
       </body>
     </html>
